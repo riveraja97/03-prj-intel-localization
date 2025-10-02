@@ -1,0 +1,192 @@
+/* Reset + Fonts */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Header / Hero Section */
+.hero {
+  background: linear-gradient(135deg, #00C7FD 0%, #003366 100%);
+  color: #fff;
+  padding: 40px 0 30px 0;
+  text-align: center;
+}
+
+.intel-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 6px #003366;
+}
+
+.hero p {
+  font-size: 1.3em;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #e0f7fa;
+  text-shadow: 1px 1px 4px #003366;
+}
+
+/* Timeline Section */
+.timeline {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 24px;
+  padding: 24px 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+/* Stack cards vertically on small screens */
+@media (max-width: 800px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+    gap: 20px;
+    scroll-snap-type: none;
+  }
+  .card {
+    min-width: 220px;
+    max-width: 95vw;
+    scroll-snap-align: none;
+  }
+}
+
+/* Card styles */
+.card {
+  background: #fff;
+  border: 2px solid #00C7FD;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 199, 253, 0.08);
+  padding: 20px;
+  min-width: 220px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  scroll-snap-align: start;
+}
+
+.card:hover {
+  box-shadow: 0 4px 24px rgba(0, 199, 253, 0.18);
+  border-color: #003366;
+}
+
+.card-img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #e0f7fa;
+}
+
+.card h2, .card h3 {
+  color: #003366;
+  margin: 8px 0 4px 0;
+  text-align: center;
+}
+
+.card-info p {
+  color: #333;
+  font-size: 1em;
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+
+/* Hidden info section */
+.card-info {
+  display: none;
+  margin-top: 8px;
+  color: #333;
+  font-size: 1em;
+}
+
+.card:hover .card-info {
+  display: block;
+}
+
+.timeline-note {
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* Carousel captions */
+.carousel-caption h5, .carousel-caption p {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Columns Section */
+.col-4 > div {
+  background: #fff;
+  border: 2px solid #00C7FD;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.col-4 > div:hover {
+  box-shadow: 0 4px 24px rgba(0, 199, 253, 0.18);
+  border-color: #003366;
+  background-color: #f0f9ff;
+}
+
+.col-4 img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.column-title {
+  color: #003366;
+  margin-bottom: 8px;
+}
+
+.column-text {
+  color: #333;
+  font-size: 1em;
+}
+
+/* Newsletter Form */
+.card-body h2 {
+  color: #003366;
+}
+
+.btn-primary {
+  background-color: #003366;
+  border-color: #003366;
+}
+
+.btn-primary:hover {
+  background-color: #00C7FD;
+  border-color: #003366;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+footer a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
